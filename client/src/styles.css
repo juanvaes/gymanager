@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+.ng-sidebar--right {
+    color:whitesmoke !important;
+    background: #332700;
+    width: 300px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(247,241,211,1) 80%, rgba(158,143,82,1) 100%);
+}
