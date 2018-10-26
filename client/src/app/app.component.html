@@ -11,7 +11,12 @@
   </ng-sidebar>
 
   <div ng-sidebar-content>
-      <button (click)="_toggleSidebar()">Toggle sidebar</button>
+    <button (click)="_toggleSidebar()">Toggle sidebar</button>
+    <div class="row">
+        <div class="col-md-10">
+          <app-client></app-client>
+        </div>
+    </div>
   </div>
   
 </ng-sidebar-container>
