@@ -1,83 +1,9 @@
 <div class="col-md-3"></div>
 <div class="container col-md-7">
-    {{diatnostic}}
-    <h3>Registro de Cliente:  {{clientone.firstname}}</h3>
-    <form #clientForm="ngForm">
-        <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" class="form-control" id="name" 
-                   required
-                   [(ngModel)]="clientone.firstname" name="name"
-                   #spy>
-            <br> Espia: {{spy.className}}
-        </div>
-
-        <div class="form-group">
-                <label for="lastname">Apellido</label>
-                <input type="text" class="form-control" id="lastname" 
-                       required
-                       [(ngModel)]="clientone.lastname" name="lastname">
-        </div>
-
-        <div class="form-group">
-            <label for="sex">Género:</label>
-            <select class="form-control" id="sel-genre" 
-                    required>
-                <option *ngFor="let genre of genres" [value]="genre">{{genre}}</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" id="email" required>
-        </div>
-
-        <div class="form-group">
-                <label for="birthdate">Fecha de Nacimiento</label>
-                <input type="text" class="form-control" id="birthdate" required>
-        </div>
-
-        <div class="form-group">
-                <label for="phone">Teléfono de Contacto:</label>
-                <input type="text" class="form-control" id="phone" required>
-        </div>
-
-        <div class="form-group">
-                <label for="country">País</label>
-                <input type="text" class="form-control" id="country" required>
-        </div>
-
-        <div class="form-group">
-                <label for="city">Ciudad</label>
-                <input type="text" class="form-control" id="city" required>
-        </div>
-
-        <div class="form-group">
-                <label for="profession">Profesión</label>
-                <input type="text" class="form-control" id="profession" required>
-        </div>
-
-        <div class="form-group">
-                <label for="sicknesses">Enfermedades</label>
-                <textarea type="text" class="form-control" id="sicknesses" required></textarea>
-        </div>
-
-        <div class="form-group">
-                <label for="surgeries">Cirugias</label>
-                <textarea type="text" class="form-control" id="surgeries" required></textarea>
-        </div>
-        
-        <h3>Contacto de Emergencia</h3>
-        <div class="form-group">
-                <label for="emergencyContactName">Nombre</label>
-                <input type="text" class="form-control" id="emergencyContactName" required>
-        </div>
-        <div class="form-group">
-                <label for="emergencyContactPhone">Teléfono</label>
-                <input type="text" class="form-control" id="emergencyContactPhone" required>
-        </div>
-
-        <button type="submit" class="btn btn-success">Submit</button>
-    </form>
-
+<h2>Clients</h2>
+<ul class="Clients">
+        <li *ngFor="let client of clients" (click)="onSelect(client)">
+                <span class="badge">{{client._id}}</span> {{client.fname}} {{client.lname}}
+        </li>
+</ul>
 </div>

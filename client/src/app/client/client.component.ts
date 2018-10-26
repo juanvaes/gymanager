@@ -1,28 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from './client';
-
+import { CLIENTS } from '../mock-clients';
 @Component({
   selector: 'app-client',
   templateUrl: './client.component.html',
   styleUrls: ['./client.component.css']
 })
 export class ClientComponent implements OnInit {
-  fname = 'Juan camilo';
-  lname = 'valencia'
-  password = '123456'
-  
-  genres = ['Masculino', 'Femenino'];
-  clientone = new Client(1, this.fname, this.lname, this.password);
-  
-  submitted = false;
 
+  clients = CLIENTS;
+  selectedClient: Client;
+
+  onSelect(client: Client): void {
+  this.selectedClient = client;
+  console.log(client)
+}
   onSubmit(){
-    this.submitted = true;
-  }
-
-  // TODO: Remove this when we're done
-  get diatnostic(){
-    return JSON.stringify(this.clientone);
   }
 
   constructor() { }

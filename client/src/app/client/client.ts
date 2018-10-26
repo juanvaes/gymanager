@@ -1,6 +1,6 @@
 export class Client{
     constructor(
-        public id: number,
+        public _id: number,
         public fname: string,
         public lname: string,
         public password: string
