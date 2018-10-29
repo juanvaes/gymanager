@@ -1,3 +1,9 @@
-<p>
-  client-detail works!
-</p>
+<div>
+  <h2>{{client.name | uppercase}} Details</h2>
+  <div><span>Id: </span>{{client._id}}</div>
+  <div>
+    <label>Name:
+      <input [(ngModel)]="client.fname" placeholder="name"/>
+    </label>
+  </div>
+</div>
