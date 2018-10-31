@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from './client';
-import { CLIENTS } from '../mock-clients';
+import { ClientService } from '../client.service'
+
 @Component({
   selector: 'app-client',
   templateUrl: './client.component.html',
@@ -8,19 +9,24 @@ import { CLIENTS } from '../mock-clients';
 })
 export class ClientComponent implements OnInit {
 
-  clients = CLIENTS;
+  clients: Client[];
   selectedClient: Client;
 
-  onSelect(client: Client): void {
-  this.selectedClient = client;
-  console.log(client)
-}
   onSubmit(){
   }
 
-  constructor() { }
+  constructor(private clientService: ClientService) { }
 
   ngOnInit() {
+    this.getHeroes();
   }
 
+  onSelect(client: Client): void {
+    this.selectedClient = client;
+    console.log(client)
+  }
+
+  getHeroes(): void {
+    this.clients = this.clientService.getHeroes();
+  }
 }
