@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
 import { RegisterClientComponent } from './register-client/register-client.component';
 import { ClientDetailComponent } from './client-detail/client-detail.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ClientDetailComponent } from './client-detail/client-detail.component';
   imports: [
     BrowserModule,
     FormsModule,
-    SidebarModule.forRoot()
+    SidebarModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

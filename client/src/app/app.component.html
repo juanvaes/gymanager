@@ -4,22 +4,31 @@
   <ng-sidebar [(opened)]="_opened" position="right" id="sidebar">
     <ul>
       <br>
-      <li>Inicio</li>
-      <li>Clientes</li>
-      <li>Pagos</li>
+      <li><a routerLink="/">Inicio</a></li>
+      <li><a routerLink="/clients">Clientes</a></li>
+      <li><a routerLink="/clientRegister">Registrar Cliente</a></li>
+      <li><a routerLink="/payments">Pagos</a></li>
     </ul>
   </ng-sidebar>
 
   <div ng-sidebar-content>
-    <button (click)="_toggleSidebar()">Toggle sidebar</button>
+    <div>
+      <button (click)="_toggleSidebar()">Toggle sidebar</button>
+    </div>
+    <div class="col-md-10">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+  
+<!--
     <div class="row">
         <div class="col-md-10">
           <app-register-client></app-register-client>
         </div>
         <div class="col-md-10">
-            <app-client></app-client>
-          </div>
+          <router-outlet></router-outlet>
+        </div>
     </div>
   </div>
-  
+-->
 </ng-sidebar-container>
