@@ -7,8 +7,9 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class ClientService {
-  getClients(): Client[] {
-    return CLIENTS;
+  
+  getClients(): Observable<Client[]> {
+    return of(CLIENTS);
   }
 
   getClient(id: number): Observable<Client>{
