@@ -10,23 +10,15 @@ import { ClientService } from '../client.service'
 export class ClientComponent implements OnInit {
 
   clients: Client[];
-  selectedClient: Client;
-
-  onSubmit(){
-  }
 
   constructor(private clientService: ClientService) { }
 
   ngOnInit() {
-    this.getHeroes();
+    this.getClients();
   }
 
-  onSelect(client: Client): void {
-    this.selectedClient = client;
-    console.log(client)
-  }
 
-  getHeroes(): void {
-    this.clients = this.clientService.getHeroes();
+  getClients(): void {
+    this.clients = this.clientService.getClients();
   }
 }

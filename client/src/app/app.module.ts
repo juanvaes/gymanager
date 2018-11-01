@@ -8,13 +8,15 @@ import { ClientComponent } from './client/client.component';
 import { RegisterClientComponent } from './register-client/register-client.component';
 import { ClientDetailComponent } from './client-detail/client-detail.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientComponent,
     RegisterClientComponent,
-    ClientDetailComponent
+    ClientDetailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
