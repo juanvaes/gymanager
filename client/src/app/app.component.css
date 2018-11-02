@@ -3,3 +3,11 @@ li {
     padding: 10px;
     border-bottom: 1px solid whitesmoke;
 }
+a{
+    color: whitesmoke;
+}
+
+#navbar{
+    background-color:#073a6d;
+    height: 100vh;
+}

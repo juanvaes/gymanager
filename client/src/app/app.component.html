@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
+<!--
 <ng-sidebar-container style="height: 100vh;">
-  <ng-sidebar [(opened)]="_opened" position="right" id="sidebar">
+  <ng-sidebar [(opened)]="_opened" position="left" id="sidebar">
     <ul>
       <br>
       <li><a routerLink="/">Inicio</a></li>
@@ -21,7 +21,7 @@
       </div>
   </div>
   </div>
-  
+-->
 <!--
     <div class="row">
         <div class="col-md-10">
@@ -32,5 +32,22 @@
         </div>
     </div>
   </div>
--->
+
 </ng-sidebar-container>
+-->
+<div>
+  <div class="col-md-2" id="navbar">
+    <ul>
+      <br>
+      <li><a routerLink="/">Inicio</a></li>
+      <li><a routerLink="/clients">Clientes</a></li>
+      <li><a routerLink="/clientRegister">Registrar Cliente</a></li>
+      <li><a routerLink="/payments">Pagos</a></li>
+    </ul>
+  </div>
+  <div class="col-md-10">
+    <div class="row">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
