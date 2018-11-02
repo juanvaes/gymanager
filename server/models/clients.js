@@ -71,3 +71,8 @@ var clientSchema = mongoose.Schema({
 })
 
 var Client = module.exports = mongoose.model('Client', clientSchema);
+
+// Add client
+module.exports.addClient() = function(client, callback){
+    Client.create(client, callback);
+}

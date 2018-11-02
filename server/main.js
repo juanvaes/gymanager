@@ -13,6 +13,18 @@ const port = 3000;
 //middlewares
 app.use(bodyParser.json())
 
+// Connect to mongoose
+mongoose.connect('mongodb://localhost/gymanager');
+
+// We need a mongo db intance
+var db = mongoose.connection;
+
+// routes
+app.get('/api/client', function(req, res){
+    console.log('Fetching client data from database');
+})
+
+
 app.listen(process.env.port || port, function(){
     console.log(`Listening on the port ${port}...`);
 });
