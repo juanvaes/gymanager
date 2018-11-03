@@ -54,7 +54,7 @@ var clientSchema = mongoose.Schema({
         type: Number,
     },
     isCompetitor:{
-        type: Number,
+        type: Boolean,
     },
     competitorId:{
         type: Number,
@@ -72,7 +72,27 @@ var clientSchema = mongoose.Schema({
 
 var Client = module.exports = mongoose.model('Client', clientSchema);
 
+// Get client
+module.exports.getClient = function(callback, limitIn){
+    Client.find(callback).limit(limitIn);
+}
+
 // Add client
-module.exports.addClient() = function(client, callback){
+module.exports.addClient = function(client, callback){
     Client.create(client, callback);
+}
+
+// Update client
+module.exports.updateClient = function(id, client, options, callback){
+    var query = {_id: id};
+    var update = {
+        fname: client.fname
+    }
+    Client.findOneAndUpdate(query, update, options, callback);
+}
+
+// delete client
+module.exports.deleteClient = function(id, callback){
+    var query = {_id: id};
+    Client.remove(query, callback);
 }

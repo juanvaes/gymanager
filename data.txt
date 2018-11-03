@@ -1,0 +1,22 @@
+{
+	"fname": "Juan",
+	"lname": "Gonzalez",
+	"password": "123456",
+	"email": "pamelachu@hotmail.com",
+	"sex": true,
+	"phone": 3002891774,
+	"countryId": 1,
+	"cityId": 1,
+	"birthDate": "1990-12-01",
+	"sicknessesId": 1,
+	"surgeriesId": 2,
+	"emergencyContactId": 4,
+	"lastVisited": "2018-12-25",
+	"professionId": 6,
+	"isCompetitor": true,
+	"competitorId": 5,
+	"paymentId": 9,
+	"postalCodeId": 70001,
+	"isFrozeen": false
+	
+}
