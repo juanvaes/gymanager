@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
+const cors = require('cors');
 
 // models
 Client = require('./models/clients')
@@ -11,7 +12,13 @@ var app = express();
 const port = 3000;
 
 //middlewares
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+const corsOptions = {
+    origin: 'http://localhost:4200',
+    optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions));
+
 
 // Connect to mongoose
 mongoose.connect('mongodb://localhost/gymanager');
@@ -22,6 +29,7 @@ var db = mongoose.connection;
 // routes
 // client routes
 app.get('/api/client', function(req, res){
+    console.log('Entra peticion a cliente')
     Client.getClient(function(err, clients){
         if (err){
             throw err;

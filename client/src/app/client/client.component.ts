@@ -14,10 +14,12 @@ export class ClientComponent implements OnInit {
   constructor(private clientService: ClientService) { }
 
   ngOnInit() {
+    console.log('Pasa por ngOnInit');
     this.getClients();
   }
 
   getClients(): void {
+    console.log('Pasa por front en getClients');
     this.clientService.getClients()
         .subscribe(clients => this.clients = clients);
   }
