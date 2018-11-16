@@ -29,7 +29,7 @@ var db = mongoose.connection;
 // routes
 // client routes
 app.get('/api/client', function(req, res){
-    console.log('Entra peticion a cliente')
+    console.log('Entra peticion get cliente')
     Client.getClient(function(err, clients){
         if (err){
             throw err;
@@ -41,6 +41,8 @@ app.get('/api/client', function(req, res){
 
 app.post('/api/client', function(req, res){
     let client = req.body;
+    console.log('Entra peticion post cliente')
+    console.log(client)
     Client.addClient(client, function(err, client){
         if (err){
             throw err;
