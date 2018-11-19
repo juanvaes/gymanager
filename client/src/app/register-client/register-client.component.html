@@ -1,79 +1,18 @@
 <div class="container">
-    <form #clientForm="ngForm" (ngSubmit)="onSubmit()" [formGroup]="registerForm" >
-        
-        <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" class="form-control" id="name" 
-                   required
-                   #spy>
-            <br> Espia: {{spy.className}}
-        </div>
-        <!--
-        <div class="form-group">
-                <label for="lastname">Apellido</label>
-                <input type="text" class="form-control" id="lastname" 
-                       required>
-        </div>
+        <h1>Registro de Cliente</h1>
+                <form [formGroup]="registerClientForm" (ngSubmit)="addClient(registerClientForm.value)">
+                <div class="form-group">
+                        <label>Nombres
+                        <input type="text" class="form-control" formControlName="name">
+                        </label>
+                </div>
+                <div class="form-group">
+                        <label>Appelidos
+                        <input type="text" class="form-control" formControlName="description">
+                        </label>
+                </div>
 
-        <div class="form-group">
-            <label for="sex">Género:</label>
-            <select class="form-control" id="sel-genre" 
-                    required>
-                <option *ngFor="let genre of genres" [value]="genre">{{genre}}</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" id="email" required>
-        </div>
-
-        <div class="form-group">
-                <label for="birthdate">Fecha de Nacimiento</label>
-                <input type="text" class="form-control" id="birthdate" required>
-        </div>
-
-        <div class="form-group">
-                <label for="phone">Teléfono de Contacto:</label>
-                <input type="text" class="form-control" id="phone" required>
-        </div>
-
-        <div class="form-group">
-                <label for="country">País</label>
-                <input type="text" class="form-control" id="country" required>
-        </div>
-
-        <div class="form-group">
-                <label for="city">Ciudad</label>
-                <input type="text" class="form-control" id="city" required>
-        </div>
-
-        <div class="form-group">
-                <label for="profession">Profesión</label>
-                <input type="text" class="form-control" id="profession" required>
-        </div>
-
-        <div class="form-group">
-                <label for="sicknesses">Enfermedades</label>
-                <textarea type="text" class="form-control" id="sicknesses" required></textarea>
-        </div>
-
-        <div class="form-group">
-                <label for="surgeries">Cirugias</label>
-                <textarea type="text" class="form-control" id="surgeries" required></textarea>
-        </div>
-        
-        <h3>Contacto de Emergencia</h3>
-        <div class="form-group">
-                <label for="emergencyContactName">Nombre</label>
-                <input type="text" class="form-control" id="emergencyContactName" required>
-        </div>
-        <div class="form-group">
-                <label for="emergencyContactPhone">Teléfono</label>
-                <input type="text" class="form-control" id="emergencyContactPhone" required>
-        </div>
-        -->
-        <button type="submit" class="btn btn-success">Registrar</button>
-    </form>
-
+                <input type="submit" class="btn btn-success" value="Registrar" [disabled]="!registerClientForm.valid">
+                </form>
+            
 </div>

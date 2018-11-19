@@ -24,9 +24,12 @@ export class ClientDetailComponent implements OnInit {
   }
 
   getClient(): void {
+    /*
     const _id = +this.route.snapshot.paramMap.get('id');
     this.clientService.getClient(_id)
         .subscribe(client => this.client = client)
+        */
+    console.log('Holi');
   };
 
   goBack(): void {

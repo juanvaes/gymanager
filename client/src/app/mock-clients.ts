@@ -2,7 +2,6 @@ import { Client } from './client/client';
 
 export const CLIENTS: Client[] = [
     {
-        _id: 1, 
         fname: 'Juan Camilo', 
         lname: 'Valencia', 
         password: '123456',
