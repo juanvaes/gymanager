@@ -6,6 +6,7 @@ const cors = require('cors');
 
 // models
 Client = require('./models/clients')
+Payment = require('./models/payments')
 
 // Initialize express app
 var app = express();
@@ -28,6 +29,8 @@ var db = mongoose.connection;
 
 // routes
 // client routes
+
+// Clients
 app.get('/api/client', function(req, res){
     console.log('Get Client')
     Client.getClient(function(err, clients){
@@ -76,6 +79,20 @@ app.delete('/api/client/:_id', function(req, res){
         }
     })
 })
+
+// Payments
+// client routes
+app.get('/api/payment', function(req, res){
+    console.log('Get Payment')
+    Payment.getPayments(function(err, clients){
+        if (err){
+            throw err;
+        } else {
+            res.json(clients)
+        }
+    })
+})
+
 
 app.listen(process.env.port || port, function(){
     console.log(`Listening on the port ${port}...`);

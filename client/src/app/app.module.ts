@@ -10,6 +10,7 @@ import { RegisterClientComponent } from './register-client/register-client.compo
 import { ClientDetailComponent } from './client-detail/client-detail.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PaymentsComponent } from './payments/payments.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ClientComponent,
     RegisterClientComponent,
     ClientDetailComponent,
-    DashboardComponent
+    DashboardComponent,
+    PaymentsComponent
   ],
   imports: [
     BrowserModule,

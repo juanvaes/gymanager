@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ClientComponent } from './client/client.component';
 import { ClientDetailComponent } from './client-detail/client-detail.component'
 import { RegisterClientComponent } from './register-client/register-client.component';
+
+import { PaymentsComponent } from './payments/payments.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 
@@ -12,7 +15,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'clients', component: ClientComponent },
   { path: 'clientDetail/:id', component: ClientDetailComponent },
-  { path: 'clientRegister', component: RegisterClientComponent }
+  { path: 'clientRegister', component: RegisterClientComponent },
+  { path: 'payments', component:  PaymentsComponent}
 ];
 
 @NgModule({
