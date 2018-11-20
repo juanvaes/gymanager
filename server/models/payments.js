@@ -22,3 +22,8 @@ var Payment = module.exports = mongoose.model('Payment', paymentSchema);
 module.exports.getPayments = function(callback, limitIn){
     Payment.find(callback).limit(limitIn);
 }
+
+// Add client
+module.exports.addPayment = function(payment, callback){
+    Payment.create(payment, callback);
+}

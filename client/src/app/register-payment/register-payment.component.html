@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
+    <h1>Registro de Pagos</h1>
+            <form [formGroup]="registerPaymentForm" (ngSubmit)="addPayment(registerPaymentForm.value)">
+              <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" class="form-control" formControlName="client" placeholder="Seleccionar Cliente">
+              </div>
+              <div class="form-group">
+                <label>Valor a pagar</label>
+                <input type="text" class="form-control" formControlName="value" placeholder="$">
+              </div>
+              <div class="form-group">
+                <label>Fecha de pago</label>
+                <input type="text" class="form-control" formControlName="paymentDate" placeholder="1990-09-09">
+              </div>
+              <input type="submit" class="btn btn-success" value="Registrar" [disabled]="!registerPaymentForm.valid">
+            </form>
+    </div>
+</div>

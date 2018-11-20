@@ -6,6 +6,7 @@ import { ClientDetailComponent } from './client-detail/client-detail.component'
 import { RegisterClientComponent } from './register-client/register-client.component';
 
 import { PaymentsComponent } from './payments/payments.component';
+import { RegisterPaymentComponent } from './register-payment/register-payment.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'clients', component: ClientComponent },
   { path: 'clientDetail/:id', component: ClientDetailComponent },
   { path: 'clientRegister', component: RegisterClientComponent },
-  { path: 'payments', component:  PaymentsComponent}
+  { path: 'payments', component:  PaymentsComponent},
+  { path: 'paymentRegister', component:  RegisterPaymentComponent}
 ];
 
 @NgModule({

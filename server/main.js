@@ -84,11 +84,24 @@ app.delete('/api/client/:_id', function(req, res){
 // client routes
 app.get('/api/payment', function(req, res){
     console.log('Get Payment')
-    Payment.getPayments(function(err, clients){
+    Payment.getPayments(function(err, payments){
         if (err){
             throw err;
         } else {
-            res.json(clients)
+            res.json(payments)
+        }
+    })
+})
+
+app.post('/api/payment', function(req, res){
+    let payment = req.body;
+    console.log('Post Payment')
+    console.log(payment)
+    Payment.addPayment(payment, function(err, client){
+        if (err){
+            throw err;
+        } else {
+            res.json(payment);
         }
     })
 })

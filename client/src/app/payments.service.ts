@@ -15,8 +15,14 @@ export class PaymentsService {
   constructor(private http: HttpClient) { }
 
   getPayments(): Observable<Payment[]> {
-    console.log('Pasa por el servicio de Pagos')
+    console.log('Pasa por el servicio GET de Pagos')
     //return of(CLIENTS);
     return this.http.get<Payment[]>('http://localhost:3000/api/payment');
+  }
+
+  postPayment(payment: Payment): Observable<Payment> {
+    console.log('Pasa por el servicio POST de Pagos')
+    //return of(CLIENTS);
+    return this.http.post<Payment>('http://localhost:3000/api/payment', payment, httpOptions);
   }
 }
