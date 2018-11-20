@@ -29,7 +29,7 @@ var db = mongoose.connection;
 // routes
 // client routes
 app.get('/api/client', function(req, res){
-    console.log('Entra peticion get cliente')
+    console.log('Get Client')
     Client.getClient(function(err, clients){
         if (err){
             throw err;
@@ -41,7 +41,7 @@ app.get('/api/client', function(req, res){
 
 app.post('/api/client', function(req, res){
     let client = req.body;
-    console.log('Entra peticion post cliente')
+    console.log('Post Client')
     console.log(client)
     Client.addClient(client, function(err, client){
         if (err){
@@ -53,7 +53,7 @@ app.post('/api/client', function(req, res){
 })
 
 app.put('/api/client/:_id', function(req, res){
-    console.log('entre a put')
+    console.log('Put Client');
     const id = req.params._id;
     let client = req.body;
     Client.updateClient(id, client, {}, function(err, client){
@@ -66,6 +66,7 @@ app.put('/api/client/:_id', function(req, res){
 })
 
 app.delete('/api/client/:_id', function(req, res){
+    console.log('Delete Client');
     const id = req.params._id;
     Client.deleteClient(id, function(err, client){
         if (err){

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core'; 
-import { Client } from './client/client'
-import { CLIENTS } from './mock-clients'
+import { Client } from './client/client';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 

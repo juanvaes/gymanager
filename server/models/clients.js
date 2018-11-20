@@ -19,54 +19,59 @@ var clientSchema = mongoose.Schema({
         required: true,
     },
     sex:{
-        type: Boolean,
+        type: String,
         required: true,
     },
     phone:{
-        type: Number,
+        type: String,
         required: true,
     },
     countryId:{
-        type: Number,
-        required: true,
+        type: String
     },
     cityId:{
-        type: Number,
-        required: true,
+        type: String
     },
     birthDate:{
         type: String,
         required: true,
     },
     sicknessesId:{
-        type: Number,
+        type: String,
+        required: true,
     },
     surgeriesId:{
-        type: Number,
+        type: String,
+        required: true,
     },
     emergencyContactId:{
-        type: Number,
+        type: String,
+        required: true,
     },
     lastVisited:{
-        type: Date,
+        type: String,
     },
     professionId:{
-        type: Number,
+        type: String,
+        required: true,
     },
     isCompetitor:{
-        type: Boolean,
+        type: String,
     },
     competitorId:{
-        type: Number,
+        type: String,
     },
     paymentId:{
-        type: Number,
+        type: String,
     },
     postalCodeId:{
-        type: Number,
+        type: String,
     },
     isFrozeen:{
-        type: Boolean,
+        type: String,
+    },
+    hobbies:{
+        type: String,
     },
 })
 
