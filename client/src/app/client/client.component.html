@@ -7,4 +7,37 @@
                 </a>
                 </li>
         </ul>
+
+        <div class="clients-table">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Cédula</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Apellido</th>
+                      <th scope="col">Actividad</th>
+                      <th scope="col">Atleta?</th>
+                      <th scope="col">Debe?</th>
+                      <th scope="col">Plan</th>
+                      <th scope="col">Última Visita</th>
+                      <th scope="col">Detalle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let client of clients">
+                      <td scope="row"> {{client._id}} </td>
+                      <td scope="row"> 1.144.000.001 </td>
+                      <td scope="row"> {{client.fname}} </td>
+                      <td scope="row"> {{client.lname}} </td>
+                      <td scope="row"> Recurrente </td>
+                      <td scope="row"> No </td>
+                      <td scope="row"> No </td>
+                      <td scope="row"> Premium </td>
+                      <td scope="row"> 2018-12-31 </td>
+                      <td scope="row"><a href="#">Ver</a></td> 
+                    </tr>
+                  </tbody>
+                </table>
+        </div>
 </div>
