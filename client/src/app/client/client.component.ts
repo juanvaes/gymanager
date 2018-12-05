@@ -16,7 +16,7 @@ export class ClientComponent implements OnInit {
 
   ngOnInit() {
     console.log('Pasa por ngOnInit en Clients');
-    this.getClients();
+    //this.getClients();
   }
 
   getClients(): void {

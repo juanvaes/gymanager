@@ -1,0 +1,22 @@
+<div class="payments-table">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID Pago</th>
+        <th scope="col">Client</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Fecha de Pago</th>
+        <th scope="col">Detalle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payment of payments">
+        <td scope="row"> {{payment._id}} </td>
+        <td scope="row"> {{payment.client}} </td>
+        <td scope="row"> {{payment.value}} </td>
+        <td scope="row"> {{payment.paymentDate}} </td>
+        <td scope="row"><a href="#">Ver</a></td> 
+      </tr>
+    </tbody>
+  </table>
+</div>

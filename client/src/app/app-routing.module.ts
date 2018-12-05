@@ -9,6 +9,7 @@ import { PaymentsComponent } from './payments/payments.component';
 import { RegisterPaymentComponent } from './register-payment/register-payment.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegistryComponent } from './registry/registry.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'clientDetail/:id', component: ClientDetailComponent },
   { path: 'clientRegister', component: RegisterClientComponent },
   { path: 'payments', component:  PaymentsComponent},
-  { path: 'paymentRegister', component:  RegisterPaymentComponent}
+  { path: 'paymentRegister', component:  RegisterPaymentComponent},
+  { path: 'registry', component:  RegistryComponent}
 ];
 
 @NgModule({

@@ -13,6 +13,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { RegisterPaymentComponent } from './register-payment/register-payment.component';
 import { ClientTableComponent } from './client-table/client-table.component';
+import { PaymentsTableComponent } from './payments-table/payments-table.component';
+import { RegistryComponent } from './registry/registry.component';
+import { RegistryTableComponent } from './registry-table/registry-table.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { ClientTableComponent } from './client-table/client-table.component';
     DashboardComponent,
     PaymentsComponent,
     RegisterPaymentComponent,
-    ClientTableComponent
+    ClientTableComponent,
+    PaymentsTableComponent,
+    RegistryComponent,
+    RegistryTableComponent
   ],
   imports: [
     BrowserModule,

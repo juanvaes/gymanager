@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Payment } from './payment';
+import { Payment } from '../payments/payment';
 import { PaymentsService } from '../payments.service';
-import { PaymentsTableComponent } from '../payments-table/payments-table.component';
 
 @Component({
-  selector: 'app-payments',
-  templateUrl: './payments.component.html',
-  styleUrls: ['./payments.component.css']
+  selector: 'app-payments-table',
+  templateUrl: './payments-table.component.html',
+  styleUrls: ['./payments-table.component.css']
 })
-export class PaymentsComponent implements OnInit {
+export class PaymentsTableComponent implements OnInit {
 
   payments: Payment[];
 
@@ -26,5 +25,4 @@ export class PaymentsComponent implements OnInit {
 
 
   }
-
 }
