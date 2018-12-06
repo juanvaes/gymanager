@@ -82,12 +82,12 @@ module.exports.getClient = function(callback, limitIn){
     Client.find(callback).limit(limitIn);
 }
 
-// Add client
+// Post client
 module.exports.addClient = function(client, callback){
     Client.create(client, callback);
 }
 
-// Update client
+// Put client
 module.exports.updateClient = function(id, client, options, callback){
     var query = {_id: id};
     var update = {
