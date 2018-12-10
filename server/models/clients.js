@@ -10,6 +10,10 @@ var clientSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    cc:{
+        type: Number,
+        required: true,
+    },
     password:{
         type: String,
         required: true,
@@ -80,6 +84,13 @@ var Client = module.exports = mongoose.model('Client', clientSchema);
 // Get client
 module.exports.getClient = function(callback, limitIn){
     Client.find(callback).limit(limitIn);
+}
+
+// Get client by CC
+// delete client
+module.exports.getClientByCC = function(cc, callback){
+    var query = {cc: cc};
+    Client.findOne(query, callback);
 }
 
 // Post client

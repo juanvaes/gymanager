@@ -2,6 +2,7 @@ export class Client{
     constructor(
         public fname: string,
         public lname: string,
+        public cc: number,
         public password: string,
         public email: string,
         public sex: string,

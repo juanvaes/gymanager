@@ -22,6 +22,7 @@ export class RegisterClientComponent implements OnInit {
     this.registerClientForm = fb.group({
       'fname': [null, Validators.required],
       'lname': [null, Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(30)])],
+      'cc':[null, Validators.required],
       'password': [null, Validators.required],
       'email': [null, Validators.required],
       'sex': [null, Validators.required], // true: male, false: female
@@ -52,6 +53,7 @@ export class RegisterClientComponent implements OnInit {
     const client = new Client(
       formClient.fname,
       formClient.lname,
+      formClient.cc,
       formClient.password,
       formClient.email,
       formClient.sex,

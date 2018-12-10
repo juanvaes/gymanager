@@ -12,6 +12,19 @@ router.get('/api/client', function(req, res){
     })
 })
 
+router.get('/api/client/:cc', function(req, res){
+    console.log('Get Client by CC')
+    const cc = req.params.cc;
+    console.log(cc)
+    Client.getClientByCC(cc,function(err, client){
+        if (err){
+            throw err;
+        } else {
+            res.json(client)
+        }
+    })
+})
+
 router.post('/api/client', function(req, res){
     let client = req.body;
     console.log('Post Client')

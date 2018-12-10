@@ -19,4 +19,9 @@
 	"postalCodeId": 70001,
 	"isFrozeen": false,
 	"hobbies": "bike"	
+	"isFrozeen": false
 }
+
+Ideas para la plataforma:
+- Crear usuarios, perfiles, roles
+- Crear opciones para que el cliente pueda entrar a la plataforma y tenga accesos a sus avances en CrossFit, fisioterapia y nutrición.

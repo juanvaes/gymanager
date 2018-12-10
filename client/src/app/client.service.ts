@@ -19,6 +19,13 @@ export class ClientService {
     return this.http.get<Client[]>('http://localhost:3000/api/client');
   }
 
+  getClientByCC(cc: number): Observable<Client> {
+    console.log('Servicio getClientByCC');
+    console.log(cc)
+    //return of(CLIENTS);
+    return this.http.get<Client>(`http://localhost:3000/api/client/${cc}`, httpOptions);
+  }
+
   addClient(client: Client): Observable<Client>{
     console.log('Entra a servicio addClient');
     console.log(client);
